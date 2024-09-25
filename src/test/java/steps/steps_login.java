@@ -45,6 +45,8 @@ public class steps_login extends Baseclass
     public static WebElement buttonFinish;
     @FindBy(xpath = "//*[@id=\"back-to-products\"]")
     public static WebElement buttonBack;
+    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[7]/div[2]/div/div/div/div/div[2]/div[1]/div[2]/button")
+    public static WebElement signUpBtn;
 
 
     @Step
@@ -65,7 +67,7 @@ public class steps_login extends Baseclass
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins","ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(chromeOptions);
-        String url = "https://www.saucedemo.com/ ";
+        String url = "https://www.investec.com/en_za/focus/money/understanding-interest-rates.html";
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         chromeOptions.addArguments("--start-maximized","--incognito","--disable-notifications");
@@ -84,8 +86,6 @@ public class steps_login extends Baseclass
         Thread.sleep(1000);
         global_pageobjects.sendKeys(passwordField,"standard_user", "Password text field");
         Thread.sleep(2000);
-
-        global_pageobjects.clickElement(String.valueOf(buttonLogin),"Login button");
 
         System.out.println(3);
     }

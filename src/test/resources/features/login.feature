@@ -1,5 +1,5 @@
-@OrderOnesie
-  Feature: Launching the tested web broweser to login
+@LoginTC001
+  Feature: Launching the tested web browser to login
     Background:
       Scenario : Verifying that user can log on to an online store, add a product to cart, check out and view payment information
 

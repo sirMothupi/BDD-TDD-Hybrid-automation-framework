@@ -86,13 +86,14 @@
             <version>4.1.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven-plugin -->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
-            <artifactId>lombok-maven-plugin</artifactId>
-            <version>1.18.20.0</version>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
             <scope>provided</scope>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
         <dependency>
             <groupId>tech.grasshopper</groupId>
@@ -115,8 +116,9 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>4.19.1</version>
+            <version>4.24.0</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -124,11 +126,14 @@
             <version>4.19.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.5.3</version>
+            <version>5.9.2</version>
         </dependency>
+
+
 
         <!--<dependency>
             <groupId>org.seleniumhq.selenium</groupId>
