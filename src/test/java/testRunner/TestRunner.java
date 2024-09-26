@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber-reports",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         dryRun = false,
-        tags = "@GreyyTechnologiesTesting_101"
+        tags = "@FunctionalTesting"
 )
 public class TestRunner
 {

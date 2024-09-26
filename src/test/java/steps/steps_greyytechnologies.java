@@ -1,26 +1,25 @@
 package steps;
 
+import global_variables.global_pageobjects;
 import net.serenitybdd.annotations.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.Baseclass;
 
-import java.util.concurrent.TimeUnit;
-
-import static utils.Baseclass.getWebDriver;
+import static global_variables.global_pageobjects.clickElement;
 
 public class steps_greyytechnologies extends Baseclass {
     Logger logger = LoggerFactory.getLogger("sampleLogger");
-
-    @FindBy(xpath = "//*[@id=\"user-name\"]")
-    public static WebElement usernameField;
-    @FindBy(xpath = "//*[@id=\"password\"]")
-    public static WebElement passwordField;
+    StringBuffer verifyErrors = new StringBuffer();
+    global_pageobjects pageobjects = new global_pageobjects();
+    @FindBy(xpath = "/html/body/div/div/div/nav/div/div/div[2]/div[2]/ul/li[1]/a")
+    public static String homeTab;
+    @FindBy(xpath = "/html/body/div/div/div/nav/div/div/div[2]/div[2]/ul/li[2]/a")
+    public static String aboutUsTab;
     @FindBy(xpath = "//*[@id=\"login-button\"]")
     public static WebElement buttonLogin;
 
@@ -44,6 +43,7 @@ public class steps_greyytechnologies extends Baseclass {
     public static WebElement buttonFinish;
     @FindBy(xpath = "//*[@id=\"back-to-products\"]")
     public static WebElement buttonBack;
+
     @Step
     public static void openUrl(String url)
     {
@@ -54,24 +54,21 @@ public class steps_greyytechnologies extends Baseclass {
 
     public void Navigate_to_the_greyy_technologies_url_TC01v2() throws Exception
     {
-        System.setProperty("webdriver.chrome.driver","src/test/resources/webdriver/chromedriver.app");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins","ignore-certificate-errors");
-        WebDriver driver = new ChromeDriver(chromeOptions);
-        String url = "www.greyytechnologies.co.za";
-        driver.get(url);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        chromeOptions.addArguments("--start-maximized","--incognito","--disable-notifications");
-        String strUrl = driver.getCurrentUrl();
-        System.out.println("Current url is:" + strUrl);
-        System.out.println(2);
+        WebDriver driver = new FirefoxDriver();
+        Thread.sleep(2000);
+        driver.get("https://greyytechnologies.co.za/");
     }
 
-    public void click_on_the_home_tab_TC01v2() throws Exception {
+    public void click_on_the_home_tab_TC01v2() throws Exception
+    {
+        Thread.sleep(2000);
+        global_pageobjects.clickElement(homeTab, "home tab");
         System.out.println(3);
     }
 
-    public void click_on_the_services_tab_TC01v2() throws Exception {
+    public void click_on_the_services_tab_TC01v2() throws Exception
+    {
+
         System.out.println(4);
     }
 

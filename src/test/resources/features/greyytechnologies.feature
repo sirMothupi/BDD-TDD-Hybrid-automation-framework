@@ -1,7 +1,7 @@
-@GreyyTechnologiesTesting_101
-Feature: Testing the Greyy Technologies Website
+@FunctionalTesting
+Feature: Greyy Technologies
   Background:
-  Scenario: Greyy Technologies Automation
+  Scenario: Testing the functionality and response of the Greyy Technologies website
 
     Then Navigate to the greyy technologies url TC01v2
     Then click on the home tab TC01v2
