@@ -36,6 +36,9 @@ public class Baseclass
         return properties;
     }
 
+    public static String testurl = getProperties().getProperty("testurl").replace("#", getProperties().getProperty("username"))
+            .replace("$", getProperties().getProperty("password"))
+            .replace("*",getProperties().getProperty("env"));
     public static void setDriver(WebDriver driver)
     {
         webDriver = driver;

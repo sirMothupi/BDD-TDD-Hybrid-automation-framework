@@ -2,6 +2,7 @@ package steps;
 
 import global_variables.global_pageobjects;
 import net.serenitybdd.annotations.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -45,34 +46,31 @@ public class steps_greyytechnologies extends Baseclass {
     public static WebElement buttonBack;
 
     @Step
-    public static void openUrl(String url)
-    {
+    public static void openUrl(String url) {
         webDriver.get(url);
         webDriver.manage().window().maximize();
 
     }
 
-    public void Navigate_to_the_greyy_technologies_url_TC01v2() throws Exception
-    {
+    public void Navigate_to_the_greyy_technologies_url_TC01v2() throws Exception {
         WebDriver driver = new FirefoxDriver();
         Thread.sleep(2000);
         driver.get("https://greyytechnologies.co.za/");
     }
 
-    public void click_on_the_home_tab_TC01v2() throws Exception
-    {
+    public void click_on_the_home_tab_TC01v2() throws Exception {
         Thread.sleep(2000);
         global_pageobjects.clickElement(homeTab, "home tab");
         System.out.println(3);
     }
 
-    public void click_on_the_services_tab_TC01v2() throws Exception
-    {
-
+    public void click_on_the_services_tab_TC01v2() throws Exception {
+        //webDriver.findElement(By.xpath("    @FindBy(xpath = \"/html/body/div/div/div/nav/div/div/div[2]/div[2]/ul/li[1]/a\")\n")).click();
         System.out.println(4);
     }
 
     public void click_on_the_contact_us_tab_and_populate_the_required_fields_TC01v2() throws Exception {
+        //webDriver.findElement(By.xpath("    @FindBy(xpath = \"/html/body/div/div/div/nav/div/div/div[2]/div[2]/ul/li[2]/a")).click();
         System.out.println(5);
     }
 
@@ -82,6 +80,7 @@ public class steps_greyytechnologies extends Baseclass {
 
     public void review_if_form_has_been_successfully_submitted_TC01v2() throws Exception {
         System.out.println(7);
-    }
 
+
+    }
 }

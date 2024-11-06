@@ -15,8 +15,8 @@ import static org.openqa.selenium.By.xpath;
 
 public class global_pageobjects extends Baseclass
 {
-    //global_pageobjects gbPageObject;
-    global_pageobjects gb_PageObject;
+    global_pageobjects gbPageObject;
+    //UIGlobalPageObjects uiGlobalPageObjects = new UIGlobalPageObjects(uiObjects)
 
     public global_pageobjects() {
     }
