@@ -10,6 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class stepdef_jdgroup
 {
+
+    //Tagname [@attribute = 'create account']
     WebDriver driver = new FirefoxDriver();
     @Given("User access the incredible site")
     public void user_access_the_incredible_site() throws Exception
