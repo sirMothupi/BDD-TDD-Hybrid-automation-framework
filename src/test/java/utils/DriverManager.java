@@ -17,14 +17,26 @@ import static io.github.bonigarcia.wdm.WebDriverManager.*;
 
 public class DriverManager
 {
-    private WebDriver webDriver;
+    public WebDriver webDriver;
     private DesiredCapabilities desiredCapabilities;
     private static DriverManager driverManager = null;
+    public static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public DriverManager()
 
     {
-        webDriver = getBrowserDriver();
+        super();
+       // webDriver = getBrowserDriver();
+    }
+
+    public static WebDriver getDriver()
+    {
+        return driver.get();
+    }
+
+    public static void setDriver(WebDriver driver)
+    {
+        DriverManager.driver.set(driver);
     }
 
     private WebDriver getBrowserDriver()
