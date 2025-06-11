@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber-reports",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         dryRun = false,
-        tags = "@IncredibleConnection"
+        tags = "@GreyyTechnologies_UI_Automation"
 )
 public class TestRunner
 {

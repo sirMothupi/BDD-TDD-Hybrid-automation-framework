@@ -6,7 +6,7 @@ import net.serenitybdd.annotations.Steps;
 import steps.steps_greyytechnologies;
 import utils.Baseclass;
 
-public class stepdef_greyytechnologies
+public class stepdef_greyytechnologies extends Baseclass
 {
     @Steps
     steps_greyytechnologies endUser;
@@ -14,7 +14,6 @@ public class stepdef_greyytechnologies
     @Then("Navigate to the greyy technologies url TC01v2")
     public void navigate_to_the_greyy_technologies_url_tc01v2() throws Exception
     {
-        // Write code here that turns the phrase above into concrete actions
         endUser.Navigate_to_the_greyy_technologies_url_TC01v2();
     }
     @Then("click on the home tab TC01v2")

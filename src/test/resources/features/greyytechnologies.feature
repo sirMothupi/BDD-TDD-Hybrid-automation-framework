@@ -1,4 +1,4 @@
-@FunctionalTesting
+@GreyyTechnologies_UI_Automation
 Feature: Greyy Technologies
   Background:
   Scenario: Testing the functionality and response of the Greyy Technologies website
